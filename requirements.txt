@@ -1,0 +1,21 @@
+# Application dependencies
+flask==2.3.0
+requests==2.31.0
+redis==4.5.0
+python-dotenv==1.0.0
+
+# Testing
+pytest==7.4.0
+pytest-cov==4.1.0
+pytest-mock==3.11.1
+
+# Code quality
+pylint==2.17.0
+black==23.3.0
+flake8==6.0.0
+
+# Security
+safety==2.3.5
+
+# Documentation
+sphinx==7.0.0

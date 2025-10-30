@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+.Python
+venv/
+env/
+
+# Build
+build/
+dist/
+*.egg-info
+
+# Tests
+.pytest_cache/
+.coverage
+htmlcov/
+test-results/
+
+# Logs
+*.log
+logs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Docker
+.dockerignore
+
+# Secrets
+*.pem
+*.key
+secrets/
+
+# OS
+.DS_Store

@@ -1,0 +1,42 @@
+jenkins:
+  systemMessage: "CI/CD Automation Pipeline - Managed by Sandeep Kumar H V"
+  numExecutors: 4
+  mode: NORMAL
+  
+  securityRealm:
+    local:
+      allowsSignup: false
+      
+  authorizationStrategy:
+    globalMatrix:
+      permissions:
+        - "Overall/Administer:admin"
+        - "Overall/Read:authenticated"
+        
+  remotingSecurity:
+    enabled: true
+
+credentials:
+  system:
+    domainCredentials:
+      - credentials:
+          - usernamePassword:
+              scope: GLOBAL
+              id: "docker-hub-credentials"
+              username: "sandeep"
+              description: "Docker Hub Credentials"
+          - string:
+              scope: GLOBAL
+              id: "github-token"
+              secret: "${GITHUB_TOKEN}"
+              description: "GitHub Access Token"
+          - basicSSHUserPrivateKey:
+              scope: GLOBAL
+              id: "deployment-ssh-key"
+              username: "deploy"
+              description: "Deployment SSH Key"
+
+unclassified:
+  location:
+    url: "http://jenkins.example.com/"
+    adminAddress: "kumarhvsandeep@gmail.com"
